@@ -19,7 +19,8 @@
         </nav>
 
         <!-- Выпадающее меню для мобильных (справа) -->
-        <nav v-if="menuOpen" class="lg:hidden absolute top-16 right-0 w-2/3 bg-purple-700 text-white p-4 transition-all duration-500 ease-in-out transform">
+        <nav v-if="menuOpen"
+          class="lg:hidden absolute top-16 right-0 w-2/3 bg-purple-700 text-white p-4 transition-all duration-500 ease-in-out transform">
           <a href="#" class="block py-2 hover:underline">Главная</a>
           <a href="#" class="block py-2 hover:underline">Услуги</a>
           <a href="#" class="block py-2 hover:underline">Обо мне</a>
@@ -39,7 +40,8 @@
           </section>
           <section class="bg-white shadow-lg p-8 rounded-2xl bg-opacity-80">
             <h2 class="text-xl font-semibold mb-2 text-gray-800">Как проходит консультация</h2>
-            <p class="text-gray-700">Опишите, как проходит ваша работа с клиентом. Пример текста для демонстрации контента.</p>
+            <p class="text-gray-700">Опишите, как проходит ваша работа с клиентом. Пример текста для демонстрации
+              контента.</p>
           </section>
           <section class="bg-white shadow-lg p-8 rounded-2xl bg-opacity-80">
             <h2 class="text-xl font-semibold mb-2 text-gray-800">Отзывы клиентов</h2>
@@ -116,10 +118,13 @@ header {
 
 /* Чтобы контент не загораживался шапкой, отступаем сверху */
 main {
-  padding-top: 100px; /* Увеличиваем отступ сверху, чтобы шапка не перекрывала контент */
-  flex-grow: 1; /* Контент растягивается на оставшуюся высоту */
+  padding-top: 100px;
+  /* Увеличиваем отступ сверху, чтобы шапка не перекрывала контент */
+  flex-grow: 1;
+  /* Контент растягивается на оставшуюся высоту */
   display: flex;
-  justify-content: center; /* Выравнивание контента по центру */
+  justify-content: center;
+  /* Выравнивание контента по центру */
   align-items: flex-start;
 }
 
@@ -128,23 +133,27 @@ main .flex {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem; /* Отступ между колонками */
+  gap: 2rem;
+  /* Отступ между колонками */
 }
 
 /* Контейнер для секций с левой и правой стороны */
-main .flex > div {
-  width: 48%; /* Контент занимает 48% ширины, оставляя отступ */
-  max-width: 100%; /* Ограничиваем максимальную ширину */
+main .flex>div {
+  width: 48%;
+  /* Контент занимает 48% ширины, оставляя отступ */
+  max-width: 100%;
+  /* Ограничиваем максимальную ширину */
 }
 
 /* Секции */
-main .space-y-8 > section {
+main .space-y-8>section {
   margin-bottom: 1.5rem;
 }
 
 /* Для футера */
 footer {
-  width: 100%; /* Растягиваем футер на всю ширину */
+  width: 100%;
+  /* Растягиваем футер на всю ширину */
   position: fixed;
   bottom: 0;
   left: 0;
