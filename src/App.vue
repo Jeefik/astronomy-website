@@ -1,19 +1,21 @@
 <template>
-  <div id="app" class="w-full flex flex-col font-sans">
+  <div id="app" class="min-h-screen min-w-full flex flex-col font-sans">
     <!-- Шапка -->
-    <header class="bg-gradient-to-r from-gray-800 to-sky-600 text-white p-4 fixed top-0 left-0 w-screen z-50 shadow-lg">
+    <header
+      class="bg-gradient-to-r from-gray-600 to-sky-600 text-white p-4 fixed top-0 left-0 w-full shadow-lg"
+    >
       <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-3xl font-bold tracking-wide uppercase text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-sky-400">
+        <h1
+          class="text-3xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-sky-400"
+        >
           Юлия Свидзинская
         </h1>
 
         <!-- Меню для мобильных -->
-        <button @click="toggleMenu" class="lg:hidden text-white text-2xl">
-          ☰
-        </button>
+        <button @click="toggleMenu" class="lg:hidden text-white text-2xl">☰</button>
 
         <!-- Навигация на больших экранах -->
-        <nav class="space-x-6 hidden lg:flex">
+        <nav class="space-x-3 gap-2.5 hidden lg:flex">
           <a href="#" class="hover:underline text-lg">Главная</a>
           <a href="#" class="hover:underline text-lg">Услуги</a>
           <a href="#" class="hover:underline text-lg">Обо мне</a>
@@ -21,8 +23,10 @@
         </nav>
 
         <!-- Выпадающее меню для мобильных -->
-        <nav v-if="menuOpen"
-          class="lg:hidden absolute top-16 right-0 w-2/3 bg-sky-800 text-white p-4 transition-all duration-500 ease-in-out transform">
+        <nav
+          v-if="menuOpen"
+          class="lg:hidden absolute top-16 right-0 w-2/3 bg-sky-800 text-white p-4 transition-all duration-500 ease-in-out transform"
+        >
           <a href="#" class="block py-2 hover:underline">Главная</a>
           <a href="#" class="block py-2 hover:underline">Услуги</a>
           <a href="#" class="block py-2 hover:underline">Обо мне</a>
@@ -38,15 +42,24 @@
         <div class="space-y-8 w-full lg:w-1/2">
           <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
             <h2 class="text-2xl font-semibold mb-4 text-gray-800">Астрологические услуги</h2>
-            <p class="text-gray-700 leading-relaxed">Здесь будет описание ваших услуг Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi fuga asperiores similique adipisci atque reiciendis rem ea eaque tempore! Velit quasi molestiae voluptatibus ullam veniam explicabo sint possimus dolorem tenetur.. Пример текста для демонстрации контента.</p>
+            <p class="text-gray-700 leading-relaxed">
+              Здесь будет описание ваших услуг Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Quasi fuga asperiores similique adipisci atque reiciendis rem ea eaque tempore!
+              Velit quasi molestiae voluptatibus ullam veniam explicabo sint possimus dolorem
+              tenetur.. Пример текста для демонстрации контента.
+            </p>
           </section>
           <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
             <h2 class="text-2xl font-semibold mb-4 text-gray-800">Как проходит консультация</h2>
-            <p class="text-gray-700 leading-relaxed">Опишите, как проходит ваша работа с клиентом. Пример текста для демонстрации контента.</p>
+            <p class="text-gray-700 leading-relaxed">
+              Опишите, как проходит ваша работа с клиентом. Пример текста для демонстрации контента.
+            </p>
           </section>
           <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
             <h2 class="text-2xl font-semibold mb-4 text-gray-800">Отзывы клиентов</h2>
-            <p class="text-gray-700 leading-relaxed">Здесь можно разместить отзывы и впечатления.</p>
+            <p class="text-gray-700 leading-relaxed">
+              Здесь можно разместить отзывы и впечатления.
+            </p>
           </section>
           <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
             <h2 class="text-2xl font-semibold mb-4 text-gray-800">Часто задаваемые вопросы</h2>
@@ -58,26 +71,36 @@
         <div class="space-y-8 w-full lg:w-1/2">
           <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
             <h2 class="text-2xl font-semibold mb-4 text-gray-800">Тема 5</h2>
-            <p class="text-gray-700 leading-relaxed">Дополнительная информация для демонстрации контента.</p>
+            <p class="text-gray-700 leading-relaxed">
+              Дополнительная информация для демонстрации контента.
+            </p>
           </section>
           <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
             <h2 class="text-2xl font-semibold mb-4 text-gray-800">Тема 6</h2>
-            <p class="text-gray-700 leading-relaxed">Добавьте сюда текст, описание услуги или раздел.</p>
+            <p class="text-gray-700 leading-relaxed">
+              Добавьте сюда текст, описание услуги или раздел.
+            </p>
           </section>
           <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
             <h2 class="text-2xl font-semibold mb-4 text-gray-800">Тема 7</h2>
-            <p class="text-gray-700 leading-relaxed">Здесь можно рассказать о специфике работы или услугах.</p>
+            <p class="text-gray-700 leading-relaxed">
+              Здесь можно рассказать о специфике работы или услугах.
+            </p>
           </section>
           <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
             <h2 class="text-2xl font-semibold mb-4 text-gray-800">Тема 8</h2>
-            <p class="text-gray-700 leading-relaxed">Поделитесь интересной информацией или предложением.</p>
+            <p class="text-gray-700 leading-relaxed">
+              Поделитесь интересной информацией или предложением.
+            </p>
           </section>
         </div>
       </div>
     </main>
 
     <!-- Футер -->
-    <footer class="bg-gradient-to-r from-sky-600 to-gray-800 text-center py-6 text-white w-full">
+    <footer
+      class="bg-gradient-to-r from-sky-600 to-gray-800 text-center py-6 text-white p-4 fixed top-0 left-0 w-screen shadow-lg"
+    >
       <p>© 2025 Астролог Юлия Свидзинская. Все права защищены.</p>
       <div class="flex justify-center space-x-6 mt-4">
         <a href="#" class="text-blue-300 hover:text-blue-500">Instagram</a>
@@ -89,18 +112,26 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const menuOpen = ref(false);
+const menuOpen = ref(false)
 
 const toggleMenu = () => {
-  menuOpen.value = !menuOpen.value;
-};
+  menuOpen.value = !menuOpen.value
+}
 </script>
 
 <style scoped>
 /* Шрифты */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+
+html, body, #app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 #app {
   font-family: 'Roboto', sans-serif;
@@ -111,12 +142,13 @@ const toggleMenu = () => {
 }
 
 header h1 {
-  font-family: 'Lora', serif;
+  margin-left: 1.5rem;
+  font-family: 'Tagesschrift', serif;
 }
 
 main {
-  padding-top: 120px;  /* Для того, чтобы контент не перекрывал шапку */
-  padding-bottom: 60px;  /* Для футера */
+  padding-top: 120px; /* Для того, чтобы контент не перекрывал шапку */
+  padding-bottom: 60px; /* Для футера */
   flex-grow: 1;
   overflow-y: auto;
   display: flex;
