@@ -1,26 +1,28 @@
 <template>
-  <div id="app" class="min-h-screen flex flex-col font-sans">
+  <div id="app" class="w-full flex flex-col font-sans">
     <!-- Шапка -->
-    <header class="bg-sky-700 text-white p-3 fixed top-0 left-0 w-full z-50">
+    <header class="bg-gradient-to-r from-gray-800 to-sky-600 text-white p-4 fixed top-0 left-0 w-screen z-50 shadow-lg">
       <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Юлия Свидзинская</h1>
+        <h1 class="text-3xl font-bold tracking-wide uppercase text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-sky-400">
+          Юлия Свидзинская
+        </h1>
 
         <!-- Меню для мобильных -->
-        <button @click="toggleMenu" class="lg:hidden text-white">
+        <button @click="toggleMenu" class="lg:hidden text-white text-2xl">
           ☰
         </button>
 
         <!-- Навигация на больших экранах -->
-        <nav class="space-x-4 hidden lg:flex">
-          <a href="#" class="hover:underline">Главная</a>
-          <a href="#" class="hover:underline">Услуги</a>
-          <a href="#" class="hover:underline">Обо мне</a>
-          <a href="#" class="hover:underline">Контакты</a>
+        <nav class="space-x-6 hidden lg:flex">
+          <a href="#" class="hover:underline text-lg">Главная</a>
+          <a href="#" class="hover:underline text-lg">Услуги</a>
+          <a href="#" class="hover:underline text-lg">Обо мне</a>
+          <a href="#" class="hover:underline text-lg">Контакты</a>
         </nav>
 
-        <!-- Выпадающее меню для мобильных (справа) -->
+        <!-- Выпадающее меню для мобильных -->
         <nav v-if="menuOpen"
-          class="lg:hidden absolute top-16 right-0 w-2/3 bg-purple-700 text-white p-4 transition-all duration-500 ease-in-out transform">
+          class="lg:hidden absolute top-16 right-0 w-2/3 bg-sky-800 text-white p-4 transition-all duration-500 ease-in-out transform">
           <a href="#" class="block py-2 hover:underline">Главная</a>
           <a href="#" class="block py-2 hover:underline">Услуги</a>
           <a href="#" class="block py-2 hover:underline">Обо мне</a>
@@ -30,58 +32,57 @@
     </header>
 
     <!-- Контент -->
-    <main class="flex-1 px-4 py-12 space-y-8">
-      <div class="flex justify-center w-full">
+    <main class="w-screen overflow-auto bg-gray-100">
+      <div class="flex justify-center w-full space-x-8">
         <!-- Левая часть секций -->
-        <div class="space-y-8 w-1/2">
-          <section class="bg-white shadow-lg p-8 rounded-2xl bg-opacity-80">
-            <h2 class="text-xl font-semibold mb-2 text-gray-800">Астрологические услуги</h2>
-            <p class="text-gray-700">Здесь будет описание ваших услуг. Пример текста для демонстрации контента.</p>
+        <div class="space-y-8 w-full lg:w-1/2">
+          <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Астрологические услуги</h2>
+            <p class="text-gray-700 leading-relaxed">Здесь будет описание ваших услуг Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi fuga asperiores similique adipisci atque reiciendis rem ea eaque tempore! Velit quasi molestiae voluptatibus ullam veniam explicabo sint possimus dolorem tenetur.. Пример текста для демонстрации контента.</p>
           </section>
-          <section class="bg-white shadow-lg p-8 rounded-2xl bg-opacity-80">
-            <h2 class="text-xl font-semibold mb-2 text-gray-800">Как проходит консультация</h2>
-            <p class="text-gray-700">Опишите, как проходит ваша работа с клиентом. Пример текста для демонстрации
-              контента.</p>
+          <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Как проходит консультация</h2>
+            <p class="text-gray-700 leading-relaxed">Опишите, как проходит ваша работа с клиентом. Пример текста для демонстрации контента.</p>
           </section>
-          <section class="bg-white shadow-lg p-8 rounded-2xl bg-opacity-80">
-            <h2 class="text-xl font-semibold mb-2 text-gray-800">Отзывы клиентов</h2>
-            <p class="text-gray-700">Здесь можно разместить отзывы и впечатления.</p>
+          <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Отзывы клиентов</h2>
+            <p class="text-gray-700 leading-relaxed">Здесь можно разместить отзывы и впечатления.</p>
           </section>
-          <section class="bg-white shadow-lg p-8 rounded-2xl bg-opacity-80">
-            <h2 class="text-xl font-semibold mb-2 text-gray-800">Часто задаваемые вопросы</h2>
-            <p class="text-gray-700">Ответьте на популярные вопросы.</p>
+          <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Часто задаваемые вопросы</h2>
+            <p class="text-gray-700 leading-relaxed">Ответьте на популярные вопросы.</p>
           </section>
         </div>
 
         <!-- Правая часть секций -->
-        <div class="space-y-8 w-1/2">
-          <section class="bg-white shadow-lg p-8 rounded-2xl bg-opacity-80">
-            <h2 class="text-xl font-semibold mb-2 text-gray-800">Тема 5</h2>
-            <p class="text-gray-700">Дополнительная информация для демонстрации контента.</p>
+        <div class="space-y-8 w-full lg:w-1/2">
+          <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Тема 5</h2>
+            <p class="text-gray-700 leading-relaxed">Дополнительная информация для демонстрации контента.</p>
           </section>
-          <section class="bg-white shadow-lg p-8 rounded-2xl bg-opacity-80">
-            <h2 class="text-xl font-semibold mb-2 text-gray-800">Тема 6</h2>
-            <p class="text-gray-700">Добавьте сюда текст, описание услуги или раздел.</p>
+          <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Тема 6</h2>
+            <p class="text-gray-700 leading-relaxed">Добавьте сюда текст, описание услуги или раздел.</p>
           </section>
-          <section class="bg-white shadow-lg p-8 rounded-2xl bg-opacity-80">
-            <h2 class="text-xl font-semibold mb-2 text-gray-800">Тема 7</h2>
-            <p class="text-gray-700">Здесь можно рассказать о специфике работы или услугах.</p>
+          <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Тема 7</h2>
+            <p class="text-gray-700 leading-relaxed">Здесь можно рассказать о специфике работы или услугах.</p>
           </section>
-          <section class="bg-white shadow-lg p-8 rounded-2xl bg-opacity-80">
-            <h2 class="text-xl font-semibold mb-2 text-gray-800">Тема 8</h2>
-            <p class="text-gray-700">Поделитесь интересной информацией или предложением.</p>
+          <section class="bg-white shadow-xl p-8 rounded-3xl bg-opacity-90">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Тема 8</h2>
+            <p class="text-gray-700 leading-relaxed">Поделитесь интересной информацией или предложением.</p>
           </section>
         </div>
       </div>
     </main>
 
     <!-- Футер -->
-    <footer class="bg-sky-700 text-center py-6 text-white w-full fixed bottom-0 left-0">
-      <p>© 2025 Астролог. Все права защищены.</p>
+    <footer class="bg-gradient-to-r from-sky-600 to-gray-800 text-center py-6 text-white w-full">
+      <p>© 2025 Астролог Юлия Свидзинская. Все права защищены.</p>
       <div class="flex justify-center space-x-6 mt-4">
-        <a href="#" class="text-blue-400 hover:text-blue-600">Instagram</a>
-        <a href="#" class="text-blue-400 hover:text-blue-600">Telegram</a>
-        <a href="#" class="text-blue-400 hover:text-blue-600">Email</a>
+        <a href="#" class="text-blue-300 hover:text-blue-500">Instagram</a>
+        <a href="#" class="text-blue-300 hover:text-blue-500">Telegram</a>
+        <a href="#" class="text-blue-300 hover:text-blue-500">Email</a>
       </div>
     </footer>
   </div>
@@ -90,7 +91,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-// Стейт для управления открытием/закрытием меню на мобильных устройствах
 const menuOpen = ref(false);
 
 const toggleMenu = () => {
@@ -99,65 +99,51 @@ const toggleMenu = () => {
 </script>
 
 <style scoped>
-/* Контейнер для всего сайта, задаём минимальную высоту */
+/* Шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400&display=swap');
+
 #app {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
 }
 
-/* Шапка растягивается на всю ширину */
-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 50;
+header h1 {
+  font-family: 'Lora', serif;
 }
 
-/* Чтобы контент не загораживался шапкой, отступаем сверху */
 main {
-  padding-top: 100px;
-  /* Увеличиваем отступ сверху, чтобы шапка не перекрывала контент */
+  padding-top: 120px;  /* Для того, чтобы контент не перекрывал шапку */
+  padding-bottom: 60px;  /* Для футера */
   flex-grow: 1;
-  /* Контент растягивается на оставшуюся высоту */
+  overflow-y: auto;
   display: flex;
   justify-content: center;
-  /* Выравнивание контента по центру */
   align-items: flex-start;
+  background-color: #f7f7f7; /* Светлый фон для контента */
 }
 
-/* Контент будет выровнен по центру с двумя колонками (левая и правая) */
 main .flex {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
-  /* Отступ между колонками */
 }
 
-/* Контейнер для секций с левой и правой стороны */
-main .flex>div {
-  width: 48%;
-  /* Контент занимает 48% ширины, оставляя отступ */
-  max-width: 100%;
-  /* Ограничиваем максимальную ширину */
+main .space-y-8 > section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #ffffff;
 }
 
-/* Секции */
-main .space-y-8>section {
-  margin-bottom: 1.5rem;
-}
-
-/* Для футера */
 footer {
-  width: 100%;
-  /* Растягиваем футер на всю ширину */
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 1.5rem;
+  position: relative;
+  padding: 2rem;
   text-align: center;
+  background: linear-gradient(90deg, rgba(14, 165, 233, 1) 0%, rgba(31, 41, 55, 1) 100%);
+  font-family: 'Roboto', sans-serif;
 }
 </style>
