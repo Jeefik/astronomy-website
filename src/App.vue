@@ -36,7 +36,7 @@
     </header>
 
     <!-- Контент -->
-    <main class="w-screen overflow-auto bg-gray-100">
+    <main class="w-screen overflow-auto bg-gray-100 px-5">
       <div class="flex justify-center w-full space-x-8">
         <!-- Левая часть секций -->
         <div class="space-y-8 w-full lg:w-1/2">
