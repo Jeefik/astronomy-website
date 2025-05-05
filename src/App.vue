@@ -8,10 +8,10 @@
           Юлия Свидзинская
         </h1>
 
-        <!-- Меню для мобильных -->
+        <!-- Менюшка для мобильных -->
         <button @click="toggleMenu" class="lg:hidden text-white text-2xl">☰</button>
 
-        <!-- Навигация на больших экранах -->
+        <!-- Навигация на full экранах -->
         <nav class="space-x-3 gap-2.5 hidden lg:flex">
           <a href="#" class="text-lg relative group">
             Главная
@@ -36,7 +36,7 @@
         </nav>
 
 
-        <!-- Выпадающее меню для мобильных -->
+        <!-- Выпадающее меню для мобилок + маленьких экранов -->
         <nav v-if="menuOpen"
           class="lg:hidden absolute top-16 right-0 w-2/3 bg-sky-800 text-white p-4 transition-all duration-500 ease-in-out transform">
           <a href="#" class="block py-2 hover:underline">Главная</a>
@@ -47,7 +47,7 @@
       </div>
     </header>
 
-    <!-- Контент -->
+    <!-- Сам Контент -->
     <main class="w-screen overflow-auto bg-gray-100 px-5">
       <div class="flex justify-center w-full space-x-8">
         <!-- Левая часть секций -->
@@ -109,7 +109,7 @@
       </div>
     </main>
 
-    <!-- Футер -->
+    <!-- Футер с соц сетями -->
     <footer
       class="bg-gradient-to-r from-sky-600 to-gray-800 text-center py-6 text-white p-4 fixed bottom-0 left-0 w-screen shadow-lg">
       <p>© 2025 Астролог Юлия Свидзинская. Все права защищены.</p>
@@ -146,7 +146,7 @@ const toggleMenu = () => {
 </script>
 
 <style scoped>
-/* Шрифты */
+/* Шрифты поключаю из google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
 
@@ -174,16 +174,13 @@ header h1 {
 
 main {
   padding-top: 120px;
-  /* Для того, чтобы контент не перекрывал шапку */
   padding-bottom: 60px;
-  /* Для футера */
   flex-grow: 1;
   overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   background-color: #f7f7f7;
-  /* Светлый фон для контента */
 }
 
 main .flex {

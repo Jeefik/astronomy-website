@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import './base.css';
 
-/* Базовые сбросы */
 html, body, #app {
   height: 100%;
   width: 100%;
@@ -9,7 +8,7 @@ html, body, #app {
   padding: 0;
 }
 
-/* Ссылки */
+
 a {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
@@ -17,7 +16,7 @@ a {
   padding: 3px;
 }
 
-/* Эффект наведения */
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
